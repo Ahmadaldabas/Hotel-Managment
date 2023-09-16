@@ -32,8 +32,8 @@ function Home() {
     };
   }, []);
   return (
-    <Container className={"font-primaryFont mt-16 px-6"}>
-      <div className="grid grid-cols-1 grid-rows-2 justify-center gap-4 px-10 lg:grid lg:grid-cols-[1fr_1.75fr] lg:p-0 ">
+    <Container className={"font-primaryFont mt-8 lg:mt-16 px-6"}>
+      <div className="grid grid-cols-1 grid-rows-2 justify-center gap-4 md:px-10 lg:grid lg:grid-cols-[1fr_1.75fr] lg:p-0 ">
         <motion.div
           className=" order-2  flex  translate-y-[16px] transform flex-col items-center gap-4  self-center text-center text-stone-700 opacity-0 lg:order-none lg:items-start  lg:text-left "
           variants={header}
@@ -76,7 +76,7 @@ function Home() {
             </motion.span>
           </div>
         </motion.div>
-        <div className=" order-1 flex self-start justify-self-center min-w-[360px]  sm:max-w-screen-sm lg:order-none">
+        <div className=" order-1 flex self-start justify-self-center   max-w-screen-sm lg:order-none">
           <motion.div
             layout
             className="mx-8"
