@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "primary-heading";
+  src: url("/fonts/PFSquareSansProBold_35480.woff");
+}
+@font-face {
+  font-family: "primary";
+  src: url("/fonts/PFSquareSansProRegular_35489.woff");
+}
+
+@layer components {
+  .text-animation {
+    @apply tran;
+  }
+}
+body {
+  overflow: hidden;
+}
