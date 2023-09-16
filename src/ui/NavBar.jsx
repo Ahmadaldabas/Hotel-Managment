@@ -27,7 +27,7 @@ function NavBar() {
   return (
     <nav className="font-primaryFont flex h-20 w-full justify-between p-4 text-stone-900  ">
       <div className="mr-48 flex items-center justify-between gap-52">
-        <NavLink className={({ isActive }) => (isActive ? "" : "")}>
+        <NavLink className={({ isActive }) => ""}>
           <Logo />
         </NavLink>
       </div>
@@ -42,9 +42,12 @@ function NavBar() {
             transition={transition}
             exit={exit}
             key={"modal"}
-            className="absolute inset-0  z-10 h-screen w-full bg-slate-300/60 "
+            onClick={() => {
+              setMenuIsOpen(false);
+            }}
+            className="absolute inset-0 backdrop-blur-sm z-10 h-screen w-full bg-slate-300/60 "
           >
-            <ul className="lg:flex lg:items-center lg:justify-center lg:gap-4  lg:text-lg">
+            <ul className="flex items-center justify-center  gap-10 h-full flex-col  text-lg">
               <li>
                 <NavLink
                   to={"/"}
@@ -81,8 +84,7 @@ function NavBar() {
                   Contact us
                 </NavLink>
               </li>
-            </ul>
-            <ul className="lg:flex lg:items-center lg:justify-center lg:gap-4  lg:text-lg">
+
               <li>
                 <NavLink
                   to={"Sign-up"}

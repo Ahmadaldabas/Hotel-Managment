@@ -16,6 +16,9 @@
     @apply tran;
   }
 }
+html {
+  overflow-x: hidden;
+}
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }

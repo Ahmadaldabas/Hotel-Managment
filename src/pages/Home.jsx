@@ -46,8 +46,8 @@ function Home() {
             for hotels of all sizes.
           </Header>
           <p className=" mb-8 text-xl text-stone-700 lg:w-80 lg:text-[1.5rem]">
-            Our app is easy to use and provides a variety of features to help
-            you manage your hotel more efficiently
+            Our app is easy to use and provides a variety of features
+            to help you manage your hotel more efficiently
           </p>
           <div className="flex items-center gap-2 ">
             <motion.span
@@ -76,7 +76,7 @@ function Home() {
             </motion.span>
           </div>
         </motion.div>
-        <div className=" order-1 flex self-start justify-self-center sm:max-w-screen-sm lg:order-none">
+        <div className=" order-1 flex self-start justify-self-center min-w-[360px]  sm:max-w-screen-sm lg:order-none">
           <motion.div
             layout
             className="mx-8"
