@@ -79,7 +79,7 @@ function Home() {
         <div className=" order-1 flex max-w-screen-sm self-start   justify-self-center lg:order-none">
           <motion.div
             layout
-            className="mx-8"
+            className="mr-8 lg:mx-8"
             transition={{ ease: "easeOut", duration: 1.2 }}
             animate={{
               y: "25%",
