@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Container from "../ui/Container";
 import Header from "../ui/Header";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import FlexContainer from "../ui/FlexContainer";
 import GridContainer from "../ui/GridContainer";
@@ -52,8 +52,9 @@ function Home() {
             </Header>
             <div>
               <p className=" mb-8  w-full text-lg text-stone-600  lg:text-[1.0rem]">
-                Our app is easy to use and provides a variety of features to
-                help you manage your hotel more efficiently
+                Our app is easy to use and provides a variety of
+                features to help you manage your hotel more
+                efficiently
               </p>
             </div>
             <div className="flex items-center gap-2">
@@ -157,11 +158,13 @@ function Home() {
               </>
             }
             src={"fetures/second.jpg"}
+            direction="right"
           ></Card>
           <Card
             p={
               <>
-                This page would list all of the <HighLight>amenities</HighLight>
+                This page would list all of the{" "}
+                <HighLight>amenities</HighLight>
                 that your hotel offers
               </>
             }

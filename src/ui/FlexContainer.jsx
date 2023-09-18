@@ -6,8 +6,8 @@ function FlexContainer({ className, children, ...props }) {
   return (
     <motion.div
       className={twMerge(
-        "flex flex-col flex-wrap items-center gap-4  text-center text-stone-700 lg:order-none lg:items-stretch  lg:text-left",
-        className,
+        "flex flex-col flex-wrap items-center gap-4   text-center text-stone-700 lg:order-none lg:items-stretch  lg:text-left",
+        className
       )}
       {...props}
     >
