@@ -19,7 +19,7 @@ function Header({ className, children, animation = false }) {
       {!animation ? (
         <h1
           className={twMerge(
-            "font-primaryFont text-[1.75rem] leading-tight text-stone-800 sm:text-[2.0rem] lg:text-[2.5rem]",
+            "font-primaryFont text-[1.75rem] leading-tight text-stone-800 sm:text-[2.0rem] xl:text-[2.5rem]",
             className,
           )}
         >
@@ -32,7 +32,7 @@ function Header({ className, children, animation = false }) {
           whileInView="active"
           viewport={{ once: true, amount: 0.7 }}
           className={twMerge(
-            "font-primaryFont text-[1.75rem] leading-tight text-stone-800 sm:text-[2.0rem] lg:text-[2.5rem]",
+            "font-primaryFont text-[1.75rem] leading-tight text-stone-800 sm:text-[2.0rem] xl:text-[2.5rem]",
             className,
           )}
         >

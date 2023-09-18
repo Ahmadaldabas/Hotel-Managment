@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 function NavBar() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
-  const transition = { type: "spring", stiffness: 100 };
+  const transition = { duration: 0.5 };
   const animate = menuIsOpen && { x: "0" };
   const exit = { x: "100%" };
 
@@ -45,9 +45,9 @@ function NavBar() {
             onClick={() => {
               setMenuIsOpen(false);
             }}
-            className="absolute inset-0 backdrop-blur-sm z-10 h-screen w-full bg-slate-300/60 "
+            className="absolute inset-0 z-10 h-screen w-full bg-slate-300/60 backdrop-blur-sm "
           >
-            <ul className="flex items-center justify-center  gap-10 h-full flex-col  text-lg">
+            <ul className="flex h-full flex-col  items-center justify-center gap-10  text-lg">
               <li>
                 <NavLink
                   to={"/"}

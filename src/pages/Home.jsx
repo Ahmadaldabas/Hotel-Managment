@@ -56,7 +56,7 @@ function Home() {
                 help you manage your hotel more efficiently
               </p>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex w-full flex-col gap-2 sm:block  sm:flex-row  lg:flex lg:items-center">
               <motion.span
                 initial={{ x: -16 }}
                 transition={{ type: "spring", stiffness: 200 }}
@@ -64,7 +64,7 @@ function Home() {
               >
                 <NavLink
                   to={"Log-in"}
-                  className="inline-block rounded-md border border-blue-500 px-8   py-3 font-bold  text-blue-600 transition-all  hover:bg-slate-200/30 active:bg-slate-200/30 "
+                  className="inline-block w-full rounded-md border border-blue-500  px-8 py-3 font-bold text-blue-600   transition-all hover:bg-slate-200/30  active:bg-slate-200/30 md:w-1/2 lg:w-auto "
                 >
                   Log in
                 </NavLink>
@@ -76,7 +76,7 @@ function Home() {
               >
                 <NavLink
                   to={"Sign-up"}
-                  className="inline-block rounded-md border bg-blue-600 px-8   py-3 font-bold text-slate-100  transition-all  hover:bg-blue-800  active:bg-blue-800 "
+                  className="inline-block  w-full rounded-md border bg-blue-600 px-8 py-3 font-bold text-slate-100  transition-all hover:bg-blue-800 active:bg-blue-800  md:w-1/2   lg:w-auto "
                 >
                   Sign up
                 </NavLink>
@@ -156,6 +156,7 @@ function Home() {
                 for rooms at your hotel.
               </>
             }
+            direction="right"
             src={"fetures/second.jpg"}
           ></Card>
           <Card
