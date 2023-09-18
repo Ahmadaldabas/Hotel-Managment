@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        primaryHeading: ["primary-heading"],
-        primaryFont: ["primary"],
+        primaryHeading: ["Roboto"],
+        primaryFont: ["Roboto"],
       },
     },
   },

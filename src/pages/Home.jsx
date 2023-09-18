@@ -32,7 +32,7 @@ function Home() {
     };
   }, []);
   return (
-    <Container className={"font-primaryFont mt-8 lg:mt-16 px-6"}>
+    <Container className={"font-primaryFont mt-8 px-6 lg:mt-16"}>
       <div className="grid grid-cols-1 grid-rows-2 justify-center gap-4 md:px-10 lg:grid lg:grid-cols-[1fr_1.75fr] lg:p-0 ">
         <motion.div
           className=" order-2  flex  translate-y-[16px] transform flex-col items-center gap-4  self-center text-center text-stone-700 opacity-0 lg:order-none lg:items-start  lg:text-left "
@@ -40,14 +40,14 @@ function Home() {
           initial="start"
           animate="active"
         >
-          <Header className="text-stone-900  ">
+          <Header className=" font-bold leading-relaxed text-stone-800">
             Our hotel management {!isSmallScreen && <br />}
             is the perfect solution {!isSmallScreen && <br />}
             for hotels of all sizes.
           </Header>
-          <p className=" mb-8 text-xl text-stone-700 lg:w-80 lg:text-[1.5rem]">
-            Our app is easy to use and provides a variety of features
-            to help you manage your hotel more efficiently
+          <p className=" mb-8 text-lg text-stone-600 lg:w-80 lg:text-[1.2rem]">
+            Our app is easy to use and provides a variety of features to help
+            you manage your hotel more efficiently
           </p>
           <div className="flex items-center gap-2 ">
             <motion.span
@@ -76,7 +76,7 @@ function Home() {
             </motion.span>
           </div>
         </motion.div>
-        <div className=" order-1 flex self-start justify-self-center   max-w-screen-sm lg:order-none">
+        <div className=" order-1 flex max-w-screen-sm self-start   justify-self-center lg:order-none">
           <motion.div
             layout
             className="mx-8"
