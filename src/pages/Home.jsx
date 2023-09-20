@@ -1,13 +1,14 @@
 import { NavLink } from "react-router-dom";
 import Container from "../ui/Container";
 import Header from "../ui/Header";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import FlexContainer from "../ui/FlexContainer";
 import GridContainer from "../ui/GridContainer";
 import Card from "../ui/Card";
 import HighLight from "../ui/HighLight";
-
+import Text from "../ui/Text";
+import NumbersCard from "../ui/NumbersCard";
 const header = {
   start: {
     opacity: 0,
@@ -21,6 +22,10 @@ const header = {
 };
 
 function Home() {
+  const counters = useRef(null);
+
+  const isInView = useInView({ root: counters, once: true, amount: 0.4 });
+
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   useEffect(() => {
     // Update the screen size state based on window width
@@ -52,9 +57,8 @@ function Home() {
             </Header>
             <div>
               <p className=" mb-8  w-full text-lg text-stone-600  lg:text-[1.0rem]">
-                Our app is easy to use and provides a variety of
-                features to help you manage your hotel more
-                efficiently
+                Our app is easy to use and provides a variety of features to
+                help you manage your hotel more efficiently
               </p>
             </div>
             <div className="flex w-full flex-col gap-2 sm:block  sm:flex-row  lg:flex lg:items-center">
@@ -159,18 +163,46 @@ function Home() {
             }
             direction="right"
             src={"fetures/second.jpg"}
-            direction="right"
           ></Card>
           <Card
             p={
               <>
-                This page would list all of the{" "}
-                <HighLight>amenities</HighLight>
+                This page would list all of the <HighLight>amenities</HighLight>
                 that your hotel offers
               </>
             }
             src={"fetures/third.jpg"}
           ></Card>
+        </GridContainer>
+      </Container>
+      <Container
+        className={"grid-cols-[1fr,1.75] border-t border-t-stone-700 "}
+      >
+        <GridContainer className={"mt-11  gap-44"}>
+          <div>
+            <Header className={"mb-4"}>
+              Choose wisdom, make the right call!
+            </Header>
+            <Text className={"lg:text-xl"}>
+              {" "}
+              Empowering Your Choices for Success
+            </Text>
+          </div>
+
+          <FlexContainer className={"gap-0 divide-y-2 divide-stone-700"}>
+            <NumbersCard
+              text={"[Number] satisfied users and growing."}
+              header={" 3M+"}
+            />
+            <NumbersCard
+              text={"[Number] countries served worldwide."}
+              header={"50+"}
+            />
+            <NumbersCard
+              text={"[Number] dedicated support agents ready to assist."}
+              header={" 100+"}
+            />
+          </FlexContainer>
         </GridContainer>
       </Container>
     </>
