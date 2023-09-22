@@ -22,10 +22,6 @@ const header = {
 };
 
 function Home() {
-  const counters = useRef(null);
-
-  const isInView = useInView({ root: counters, once: true, amount: 0.4 });
-
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   useEffect(() => {
     // Update the screen size state based on window width
@@ -57,8 +53,9 @@ function Home() {
             </Header>
             <div>
               <p className=" mb-8  w-full text-lg text-stone-600  lg:text-[1.0rem]">
-                Our app is easy to use and provides a variety of features to
-                help you manage your hotel more efficiently
+                Our app is easy to use and provides a variety of
+                features to help you manage your hotel more
+                efficiently
               </p>
             </div>
             <div className="flex w-full flex-col gap-2 sm:block  sm:flex-row  lg:flex lg:items-center">
@@ -167,7 +164,8 @@ function Home() {
           <Card
             p={
               <>
-                This page would list all of the <HighLight>amenities</HighLight>
+                This page would list all of the{" "}
+                <HighLight>amenities</HighLight>
                 that your hotel offers
               </>
             }
@@ -176,12 +174,19 @@ function Home() {
         </GridContainer>
       </Container>
       <Container
-        className={"grid-cols-[1fr,1.75] border-t border-t-stone-700 "}
+        className={
+          "grid-cols-[1fr,1.75] border-t border-t-stone-700 "
+        }
       >
-        <GridContainer className={"mt-11  gap-44"}>
+        <GridContainer
+          className={
+            "text-center lg:text-left mt-11 gap-10  lg:gap-44"
+          }
+        >
           <div>
-            <Header className={"mb-4"}>
-              Choose wisdom, make the right call!
+            <Header className={"mb-4"} animation={true}>
+              Choose wisdom, make the <HighLight>right</HighLight>{" "}
+              call!
             </Header>
             <Text className={"lg:text-xl"}>
               {" "}
@@ -189,20 +194,55 @@ function Home() {
             </Text>
           </div>
 
-          <FlexContainer className={"gap-0 divide-y-2 divide-stone-700"}>
+          <FlexContainer
+            className={"gap-0 divide-y-2 divide-stone-700"}
+          >
             <NumbersCard
-              text={"[Number] satisfied users and growing."}
-              header={" 3M+"}
+              text={"3K+ satisfied users and growing."}
+              header={"K+"}
+              start={0}
+              end={3}
             />
             <NumbersCard
-              text={"[Number] countries served worldwide."}
-              header={"50+"}
+              text={`50+ countries served worldwide.`}
+              header={"+"}
+              start={0}
+              end={50}
             />
             <NumbersCard
-              text={"[Number] dedicated support agents ready to assist."}
-              header={" 100+"}
+              text={"100+ dedicated support agents ready end assist."}
+              header={"+"}
+              start={0}
+              end={100}
             />
           </FlexContainer>
+        </GridContainer>
+      </Container>
+      <Container>
+        <GridContainer className={"lg:grid-cols-2 lg:grid-rows-2 "}>
+          <Header
+            className={
+              "bg-red-600 col-span-[1/2] col-start-1 col-end-2 row-start-1 row-end-2  row-span-[1/2]"
+            }
+          >
+            Bringing your ideas to life through UI design
+          </Header>
+          <GridContainer
+            className={
+              "col-start-1 col-end-2 row-start-2 row-end-3 lg:grid-cols-3 flex-row"
+            }
+          >
+            <FlexContainer
+              className={" bg-green-500"}
+            ></FlexContainer>
+            <FlexContainer
+              className={" bg-green-500"}
+            ></FlexContainer>
+
+            <FlexContainer
+              className={" bg-green-500"}
+            ></FlexContainer>
+          </GridContainer>
         </GridContainer>
       </Container>
     </>

@@ -2,7 +2,12 @@ import { motion } from "framer-motion";
 
 import { twMerge } from "tailwind-merge";
 
-function FlexContainer({ className, children, ...props }) {
+function FlexContainer({
+  className,
+  children,
+  innerRef = null,
+  ...props
+}) {
   return (
     <motion.div
       className={twMerge(
@@ -10,6 +15,7 @@ function FlexContainer({ className, children, ...props }) {
         className
       )}
       {...props}
+      ref={innerRef}
     >
       {children}
     </motion.div>
